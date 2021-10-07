@@ -1,5 +1,5 @@
 /*!
- * perfect-scrollbar v1.5.2
+ * perfect-scrollbar v1.6.0
  * Copyright 2021 Hyunje Jun, MDBootstrap and Contributors
  * Licensed under MIT
  */
@@ -117,7 +117,7 @@
       this.handlers[eventName] = [];
     }
     this.handlers[eventName].push(handler);
-    this.element.addEventListener(eventName, handler, false);
+    this.element.addEventListener(eventName, handler, false, { passive: true });
   };
 
   EventElement.prototype.unbind = function unbind (eventName, target) {
